@@ -62,8 +62,7 @@ void placePlayerMines(std::vector<std::vector<Cell>>& board, int mineCount)
             } 
             else if (board[y][x].owner == Owner::None) 
             {
-                board[y][x].owner = Owner::Player;
-                board[y][x].mine = Mine{};
+                setCellStatus(board, x, y, Owner::Player);
                 placed++;
             } 
             else 
@@ -88,14 +87,12 @@ void placeCpuMines(std::vector<std::vector<Cell>>& board, int mineCount, const C
 
         if (board[y][x].owner == Owner::Player)
         {
-            board[y][x].owner = Owner::Shared;
-            board[y][x].mine = Mine{};
+            setCellStatus(board, x, y, Owner::Shared);
             placed++;
         } 
         else if (board[y][x].owner == Owner::None)
         {
-            board[y][x].owner = Owner::Cpu;
-            board[y][x].mine = Mine{};
+            setCellStatus(board, x, y, Owner::Cpu);
             placed++;
         }
     }
@@ -203,21 +200,21 @@ void playTurns(int height, int width, int totalMines, const CoordGenerator& gene
             {
                 std::cout << "CPU destroyed one of your mines!\n";
                 if (board[y][x].mine) board[y][x].mine->status = Mine::Status::Destroyed;
-                board[y][x].owner = Owner::Destroy;
+                setCellStatus(board, x, y, Owner::Destroy);
                 playerMinesLeft--;
             } 
             else if (board[y][x].owner == Owner::Shared) 
             {
                 std::cout << "CPU destroyed shared mine!\n";
                 if (board[y][x].mine) board[y][x].mine->status = Mine::Status::Destroyed;
-                board[y][x].owner = Owner::Destroy;
+                setCellStatus(board, x, y, Owner::Destroy);
                 playerMinesLeft--;
                 cpuMinesLeft--;
             } 
             else 
             {
                 std::cout << "CPU missed.\n";
-                board[y][x].owner = Owner::Disabled;
+                setCellStatus(board, x, y, Owner::Disabled);
             }
 
             if (playerMinesLeft <= 0) 
@@ -242,5 +239,16 @@ void playTurns(int height, int width, int totalMines, const CoordGenerator& gene
     else
     {
         std::cout << "You win!\n";
+    }
+}
+
+
+
+void setCellStatus(std::vector<std::vector<Cell>>& board, unsigned int x, unsigned int y, Owner owner) 
+{
+    board[y][x].owner = owner;
+    if (owner != Owner::Disabled && owner!= Owner::Destroy)
+    {
+        board[y][x].mine = Mine{};
     }
 }
