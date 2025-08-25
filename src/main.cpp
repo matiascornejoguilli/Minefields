@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Utils.h"
-#include "Game.h"
-#include "Player.h"
+#include <uniTestingcpp/Utils.h>
+#include <uniTestingcpp/Game.h>
+#include <uniTestingcpp/Player.h>
 
 int main() 
 {

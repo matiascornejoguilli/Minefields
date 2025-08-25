@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
-#include "Utils.h"
+#include <uniTestingcpp/Utils.h>
+#include <string>
+
 
 void inputBoardSize(int& height, int& width) 
 {
@@ -18,19 +20,29 @@ void inputBoardSize(int& height, int& width)
     } while (width < MinSize || width > MaxSize);
 }
 
-int inputMines(Player& player) 
+int inputMines(Player& player)
 {
-    static const unsigned int MaxMines = 4;
-    static const unsigned int MinMines = 2;
-    do 
+    static unsigned int const MaxMines = 4;
+    static unsigned int const MinMines = 2;
+    std::string message = "Enter the number of mines (" + std::to_string(MinMines) + " to " + std::to_string(MaxMines) + "): ";
+    do
     {
-        std::cout << "Enter the number of mines (" << MinMines << "-" << MaxMines << "): ";
-        std::cin >> player.playerMines;
+        player.playerMines = inputFunc(message);
     } while (player.playerMines < MinMines || player.playerMines > MaxMines);
     return player.playerMines;
 }
 
+
 std::pair<int, int> generateRandomCoord(int width, int height) 
 {
     return { rand() % width, rand() % height };
+}
+
+
+int inputFunc(const std::string& message)
+{
+    int x = 0;
+    std::cout << message;
+    std::cin >> x;
+    return x;
 }

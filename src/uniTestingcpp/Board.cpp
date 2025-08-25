@@ -1,4 +1,4 @@
-#include "Board.h"
+#include <uniTestingcpp/board.h>
 
 Board::Board(size_t width, size_t height) 
 {
