@@ -9,4 +9,5 @@ namespace boardTesting
         ASSERT_TRUE(board.grid.size() == 6);
 
 	}
+
 }
