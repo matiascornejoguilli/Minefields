@@ -1,4 +1,4 @@
-#include <uniTestingcpp/board.h>
+#include <Minefields/board.h>
 
 Board::Board(size_t width, size_t height) 
 {

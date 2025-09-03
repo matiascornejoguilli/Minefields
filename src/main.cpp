@@ -1,7 +1,7 @@
 #include <iostream>
-#include <uniTestingcpp/Utils.h>
-#include <uniTestingcpp/Game.h>
-#include <uniTestingcpp/Player.h>
+#include <Minefields/Utils.h>
+#include <Minefields/Game.h>
+#include <Minefields/Player.h>
 
 int main() 
 {
