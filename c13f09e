@@ -1,0 +1,8 @@
+[33me21ec4e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdeve[m[33m, [m[1;31morigin/refactor[m[33m, [m[1;32mrefactor[m[33m)[m Merge pull request #3 from matiascornejoguilli/tests
+[33m4121d62[m Initial tests
+[33mc13f09e[m refactor
+[33ma026302[m Encapsulating logic
+[33m2d48c4f[m first commit
+[33mc87e326[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m)[m * fixing cmake issues while laying files in Visual Studio filters
+[33m0125a67[m * fixed build due to old CMake versions (because of dependencies)
+[33m8e93e19[m ! initial commit
