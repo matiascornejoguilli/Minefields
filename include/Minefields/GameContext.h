@@ -10,11 +10,12 @@ namespace Minefields
 
 using CoordGenerator = std::function<std::pair<int, int>()>;
 
-    enum class Attempted : unsigned char
-    {
-        No,
-        Yes
-    };
+enum class Attempted : unsigned char
+{
+    No,
+    Yes
+};
+
 struct GameContext
 {
     int width = 0;
@@ -29,6 +30,7 @@ struct GameContext
     inline void resetAttemptedShots(GameContext& gameContext)
     {
         gameContext.attemptedShots.assign(gameContext.height, std::vector<Attempted>(gameContext.width, Attempted::No));
-    };
+    }
 
-}; // namespace Minefields
+}; 
+} // namespace Minefields
