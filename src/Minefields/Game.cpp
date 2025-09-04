@@ -1,9 +1,9 @@
-#include <uniTestingcpp/Board.h>
-#include <uniTestingcpp/Cell.h>
-#include <uniTestingcpp/Game.h>
-#include <uniTestingcpp/Mine.h>
-#include <uniTestingcpp/Player.h>
-#include <uniTestingcpp/Utils.h>
+#include <Minefields/Board.h>
+#include <Minefields/Cell.h>
+#include <Minefields/Game.h>
+#include <Minefields/Mine.h>
+#include <Minefields/Player.h>
+#include <Minefields/Utils.h>
 
 #include <iostream>
 #include <string>
