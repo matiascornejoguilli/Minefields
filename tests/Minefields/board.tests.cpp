@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include <uniTestingcpp/Board.h>
-#include <uniTestingcpp/Game.h>
+#include <Minefields/Board.h>
+#include <Minefields/Game.h>
 
 /* TEST(Board, should_change_coord_status)
 {

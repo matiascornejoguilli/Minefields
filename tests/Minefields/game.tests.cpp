@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include <uniTestingcpp/Game.h>
-#include <uniTestingcpp/Board.h>
-#include <uniTestingcpp/Cell.h>
-#include <uniTestingcpp/Player.h>
+#include <Minefields/Game.h>
+#include <Minefields/Board.h>
+#include <Minefields/Cell.h>
+#include <Minefields/Player.h>
 
 namespace gameTests
 {

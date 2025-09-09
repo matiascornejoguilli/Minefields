@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <uniTestingcpp/Board.h>
+#include <Minefields/Board.h>
 
 namespace boardTesting
 {
