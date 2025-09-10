@@ -1,4 +1,4 @@
-#pragma once
+/* #pragma once
 #include "GameContext.h"
 
 namespace Minefields
@@ -19,8 +19,11 @@ State stateMainMenuUpdate(GameContext& context);
 State stateOptionsUpdate(GameContext& context);
 State stateQuitUpdate(GameContext& context); 
 
+State currentState;
+
 void runMainLoop();
 
 void clearConsoleBuffer();
 
 } // namespace Minefields
+*/

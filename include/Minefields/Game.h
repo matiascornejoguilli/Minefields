@@ -1,6 +1,7 @@
 #pragma once
 #include <functional>
 #include "Cell.h"
+#include "Utils.h"
 
 typedef std::function<std::pair<int, int>()> CoordGenerator;
 

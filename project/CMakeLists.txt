@@ -37,21 +37,12 @@ if (project_config_extra_sources)
     list(APPEND src_files "${project_config_extra_sources}")
 endif()
 if (${project_config_use_unit_tests})
-<<<<<<< Updated upstream
     set(file_patterns "../src/*${project_config_unit_tests_file_tag}.cpp")
-=======
-    set(file_patterns "../tests/${project_config_name}/*.tests.cpp")
-    set(project_config_unit_tests_extra_sources "../src/${project_config_name}/*.cpp")
->>>>>>> Stashed changes
     if (project_config_unit_tests_extra_sources)
         list(APPEND file_patterns "${project_config_unit_tests_extra_sources}")
     endif()
     gather_files(test_files true "${file_patterns}" "${platform_excludes}")
-<<<<<<< Updated upstream
     gather_files(test_headers true "../src/*${project_config_unit_tests_file_tag}.h" "${platform_excludes}")
-=======
-    gather_files(test_headers true "../tests/${project_config_name}/*.tests.h" "${platform_excludes}")
->>>>>>> Stashed changes
 endif()
 if (${project_config_use_benchmark})
     set(file_patterns "../src/*${project_config_benchmark_file_tag}.cpp")
@@ -97,13 +88,7 @@ endif()
 if (project_config_${PROJECT_NAME}_make_external AND (src_files OR header_files))
     set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX FOLDER ${project_folder})
 endif()
-<<<<<<< Updated upstream
 
 setup_visual_studio_filters("${project_config_vs_header_filters_erase_tokens}" header_files)
 setup_visual_studio_filters("${project_config_vs_source_filters_erase_tokens}" src_files)
 ###
-=======
-setup_visual_studio_filters("${project_config_vs_header_filters_erase_tokens}" header_files)
-setup_visual_studio_filters("${project_config_vs_source_filters_erase_tokens}" src_files)
-###
->>>>>>> Stashed changes
