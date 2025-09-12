@@ -6,4 +6,4 @@
 void inputBoardSize(int& height, int& width);
 int inputMines(Player& player);
 std::pair<int, int> generateRandomCoord(int width, int height);
-int inputFunc(std::string const& message);
+int inputInt(std::string const& message);

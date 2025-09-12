@@ -27,7 +27,7 @@ int inputMines(Player& player)
     std::string message = "Enter the number of mines (" + std::to_string(MinMines) + " to " + std::to_string(MaxMines) + "): ";
     do
     {
-        player.playerMines = inputFunc(message);
+        player.playerMines = inputInt(message);
     } while (player.playerMines < MinMines || player.playerMines > MaxMines);
     return player.playerMines;
 }
@@ -39,7 +39,7 @@ std::pair<int, int> generateRandomCoord(int width, int height)
 }
 
 
-int inputFunc(const std::string& message)
+int inputInt(const std::string& message)
 {
     int x = 0;
     std::cout << message;

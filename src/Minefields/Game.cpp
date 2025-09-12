@@ -47,8 +47,8 @@ void placePlayerMines(std::vector<std::vector<Cell>>& board, int mineCount)
     while (placed < mineCount)
     {
         std::cout << "\n[Mines left to place: " + std::to_string(mineCount - placed) + "]\n";
-        x = inputFunc("enter X: ");
-        y = inputFunc("Enter Y: ");
+        x = inputInt("enter X: ");
+        y = inputInt("Enter Y: ");
 
         if (y < 0 || y >= boardHeight || x < 0 || x >= boardWidth)
         {
