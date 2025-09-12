@@ -12,4 +12,5 @@ void printBoard(std::vector<std::vector<Cell>> const& board);
 void placePlayerMines(std::vector<std::vector<Cell>>& board, int mineCount);
 void setCellStatus(std::vector<std::vector<Cell>>& board, unsigned int x, unsigned int y, Owner owner);
 bool shoot(int const& x, int const& y, int const& width, int const& height, int& cpuMinesLeft, int& playerMinesLeft, std::vector<std::vector<Cell>>& board);
+void placeCpuMines(std::vector<std::vector<Cell>>& board, int mineCount, CoordGenerator const& generateCoord);
 
