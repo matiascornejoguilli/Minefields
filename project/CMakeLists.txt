@@ -92,4 +92,3 @@ endif()
 setup_visual_studio_filters("${project_config_vs_header_filters_erase_tokens}" header_files)
 setup_visual_studio_filters("${project_config_vs_source_filters_erase_tokens}" src_files)
 ###
-
