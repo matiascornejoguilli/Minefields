@@ -15,6 +15,7 @@ struct State
 State stateMainMenuUpdate(GameContext& context);
 State stateOptionsUpdate(GameContext& context);
 State stateQuitUpdate(GameContext& context);
+State statePlayingUpdate(GameContext& context);
 
 void runMainLoop();
 void clearConsoleBuffer();
