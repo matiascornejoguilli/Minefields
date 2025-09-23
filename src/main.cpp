@@ -2,19 +2,21 @@
 #include <Minefields/Utils.h>
 #include <Minefields/Game.h>
 #include <Minefields/Player.h>
+#include <Minefields/States.h>
 
 int main() 
 {
     int height = 0;
     int width = 0;
-    inputBoardSize(height, width);
+    //inputBoardSize(height, width);
 
     Player player;
-    int totalMines = inputMines(player);
+    //int totalMines = inputMines(player);
 
     CoordGenerator generateCoord = std::bind(generateRandomCoord, width, height);
 
-    playTurns(height, width, totalMines, generateCoord);
+    Minefields::runMainLoop();
+   // playTurns(height, width, totalMines, generateCoord);
 
     return 0;
 }
