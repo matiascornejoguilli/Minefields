@@ -97,38 +97,7 @@ void placeCpuMines(std::vector<std::vector<Cell>>& board, int mineCount, CoordGe
         }
     }
 }
-void playTurns(int height, int width, int totalMines, CoordGenerator const& generateCoord)
-{
-    int playerMinesLeft = totalMines;
-    int cpuMinesLeft = totalMines;
 
-    Board gameBoard(width, height);
-    auto& board = gameBoard.grid;
-
-    placePlayerMines(board, playerMinesLeft);
-    placeCpuMines(board, cpuMinesLeft, generateCoord);
-
-    while (playerMinesLeft > 0 && cpuMinesLeft > 0)
-    {
-        std::cout << "\n===== NEW ROUND =====\n";
-
-        std::vector<std::vector<bool>> matrix(height, std::vector<bool>(width, false));
-
-        std::cout << "\n--- Player's turn ---\n";
-        playerTurn(board, matrix, width, height, playerMinesLeft, cpuMinesLeft);
-
-        if (cpuMinesLeft <= 0)
-        {
-            break;
-        }
-
-        std::cout << "\n--- CPU's turn ---\n";
-        cpuTurn(board, matrix, width, height, playerMinesLeft, cpuMinesLeft, generateCoord);
-
-        printBoard(board);
-        std::cout << "\nMines left - Player: " << playerMinesLeft << ", CPU: " << cpuMinesLeft << "\n";
-    }
-}
 void playerTurn(std::vector<std::vector<Cell>>& board, std::vector<std::vector<bool>>& matrix, int width, int height, int& playerMinesLeft, int& cpuMinesLeft)
 {
     bool validInput = false;
